@@ -1,28 +1,59 @@
-import React, { } from 'react';
+import React from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const Home = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+  };
+
   return (
-    <div className='flex h-screen'>
-      {/* <div className='transition-all cursor-pointer hover:text-opacity-50 text-4xl font-bold text-cyan-500 text-center my-40 border border-violet-600 border-4 p-2 rounded-full mx-10'>Hello World !</div> */}
-      <div className='w-6/12 bg-cyan-700 text-center flex items-center justify-center text-4xl font-bold text-white font-mono'>Pet Sitter</div>
-      <div className='w-6/12 flex items-center justify-center'>
-        <div className='w-full'>
-          <div className='text-2xl text-center mb-6 font-medium font-mono items-center'>Login</div>
-          <div className='text-center mr-36'>Email:</div>
-          <div className='flex justify-center'>
-            <input className='mb-3 border p-1 border-gray-500 rounded-md' type='text'/>
+    <div className='mt-10 w-8/12 mx-auto'>
+      <div className=''>
+        <Slider {...settings}>
+          {/* <div className='bg-green-300 h-48'></div>
+          <div className='bg-red-300 h-48'></div>
+          <div className='bg-cyan-300 h-48'></div>
+          <div className='bg-purple-300 h-48'></div>
+          <div className='bg-yellow-300 h-48'></div> */}
+          <div>
+            <img src='https://www.freewebheaders.com/wp-content/gallery/dogs/couple-of-bernese-mountain-dogs-in-floral-field-web-header.jpg' alt='Slide 1' />
           </div>
-          <div className='text-center mr-28'>Password:</div>
-          <div className='flex justify-center'>
-            <input className='mb-3 border p-1 border-gray-500 rounded-md' type='text'/>
+          <div >
+            <img src='https://www.freewebheaders.com/wp-content/gallery/dogs/cute-chinese-pug-dog-website-header.jpg' alt='Slide 2' />
           </div>
-          <div className='bg-blue-600 flex justify-center mx-96 rounded-md text-white font-medium p-1 cursor-pointer hover:bg-blue-500'>LOGIN</div>
-          <div className='flex mt-4 justify-center mr-2'>Don't you have an account yet?</div>
-          <div className='flex mt-2 justify-center hover:underline cursor-pointer text-blue-600 font-medium'>Register here!</div>
+          <div>
+            <img src='https://www.freewebheaders.com/wp-content/gallery/dogs//german-shepherd-dog-and-puppy-website-header.jpg' alt='Slide 3' />
+          </div>
+          <div>
+            <img src='https://www.freewebheaders.com/wp-content/gallery/dogs//golden-retriever-puppy-relaxing-on-white-cat-web-header.jpg' alt='Slide 4' />
+          </div>
+        </Slider>
+        <div className='flex mt-20 items-center'>
+          <div className='w-4/12'>
+            <div className='cursor-pointer text-white border border-1 w-fit px-4 py-1 rounded-md my-5 hover:text-cyan-900 hover:bg-white transition-all'>Button 1</div>
+            <div className='cursor-pointer text-white border border-1 w-fit px-4 py-1 rounded-md my-5 hover:text-cyan-900 hover:bg-white transition-all'>Button 2</div>
+            <div className='cursor-pointer text-white border border-1 w-fit px-4 py-1 rounded-md my-5 hover:text-cyan-900 hover:bg-white transition-all'>Button 3</div>
+            <div className='cursor-pointer text-white border border-1 w-fit px-4 py-1 rounded-md my-5 hover:text-cyan-900 hover:bg-white transition-all'>Button 4</div>
+            <div className='cursor-pointer text-white border border-1 w-fit px-4 py-1 rounded-md my-5 hover:text-cyan-900 hover:bg-white transition-all'>Button 5</div>
+          </div>
+          <div className='w-8/12 text-white text-xl font-medium text-center font-protest-riot'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
         </div>
+
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Home;

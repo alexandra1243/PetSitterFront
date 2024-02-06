@@ -22,6 +22,10 @@ module.exports = {
       },
       animation: {
         'fade-in': 'fade-in 1.4s'
+      },
+      fontFamily: {
+        'pacifico': ['Pacifico'],
+        'protest-riot': ['Protest Riot'],
       }
     },
     colors: {
